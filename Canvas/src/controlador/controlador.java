@@ -22,7 +22,7 @@ public class controlador implements ActionListener{
 
     public void iniciar(modelo drawArea) {
         if(drawArea == null){
-            drawArea = new modelo(seleccion, rellenado);
+            drawArea = new modelo();
         }
         view.show(drawArea);
     }
@@ -36,8 +36,6 @@ public class controlador implements ActionListener{
                      if ( evento.getStateChange() == ItemEvent.SELECTED ){
                          //seleccion = view.combo.getSelectedItem().toString();
                          seleccion = "Linea";
-                         modelo drawArea = new modelo(seleccion, rellenado);
-                         iniciar(drawArea);
                      }
                 }
             }
